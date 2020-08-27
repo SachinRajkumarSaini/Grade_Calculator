@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Grade_Calculator/static/css/main.308e47ef.chunk.css",
+    "main.js": "/Grade_Calculator/static/js/main.8d678f59.chunk.js",
+    "main.js.map": "/Grade_Calculator/static/js/main.8d678f59.chunk.js.map",
+    "runtime-main.js": "/Grade_Calculator/static/js/runtime-main.8f431233.js",
+    "runtime-main.js.map": "/Grade_Calculator/static/js/runtime-main.8f431233.js.map",
+    "static/css/2.11829350.chunk.css": "/Grade_Calculator/static/css/2.11829350.chunk.css",
+    "static/js/2.12a94a74.chunk.js": "/Grade_Calculator/static/js/2.12a94a74.chunk.js",
+    "static/js/2.12a94a74.chunk.js.map": "/Grade_Calculator/static/js/2.12a94a74.chunk.js.map",
+    "index.html": "/Grade_Calculator/index.html",
+    "precache-manifest.cfd1c43888dec33240e7b7d449591177.js": "/Grade_Calculator/precache-manifest.cfd1c43888dec33240e7b7d449591177.js",
+    "service-worker.js": "/Grade_Calculator/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/Grade_Calculator/static/css/2.11829350.chunk.css.map",
+    "static/css/main.308e47ef.chunk.css.map": "/Grade_Calculator/static/css/main.308e47ef.chunk.css.map",
+    "static/js/2.12a94a74.chunk.js.LICENSE.txt": "/Grade_Calculator/static/js/2.12a94a74.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f431233.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.12a94a74.chunk.js",
+    "static/css/main.308e47ef.chunk.css",
+    "static/js/main.8d678f59.chunk.js"
+  ]
+}
