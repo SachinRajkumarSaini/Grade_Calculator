@@ -37,7 +37,7 @@
 }
 
 .main-area .text-area> ul li{
-    font: normal 700 40px/50px var(--roboto);
+    font: normal 700 34px/45px var(--roboto);
     color: #27c5b6;
     animation: light 1.3s linear infinite;
 }
@@ -89,7 +89,8 @@ p{
 
 .main-area .text-area ul{
     display: flex;
-   
+    justify-content: center;
+    
 }
 
 .main-area .text-area ul li{

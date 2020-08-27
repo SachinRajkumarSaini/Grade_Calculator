@@ -13,7 +13,7 @@ let grade = () => {
     let grade = "";
 
 
-    if (physics === 0 && chemistry === 0 && maths === 0 && computer === 0) {
+    if (physics == 0 && chemistry == 0 && maths == 0 && computer == 0) {
         alert('Please Enter The Marks of All Subject');
     } else {
 
