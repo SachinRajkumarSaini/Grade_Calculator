@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Row, Col, Input, Button } from 'reactstrap';
+import { Jumbotron, Row, Col, Input, Button, Form } from 'reactstrap';
 import "./main.css";
 
 document.body.style = 'background-color: #27c5b6;';
@@ -12,33 +12,48 @@ let grade = () => {
     let percentage = total / 400 * 100;
     let grade = "";
 
-
-    if (physics == 0 && chemistry == 0 && maths == 0 && computer == 0) {
-        alert('Please Enter The Marks of All Subject');
-    } else {
-
-        if (percentage <= 100 && percentage >= 90) {
-            grade = 'A+';
-        } else if (percentage < 90 && percentage >= 80) {
-            grade = 'A';
-        } else if (percentage < 80 && percentage >= 70) {
-            grade = 'B+';
-        } else if (percentage < 70 && percentage >= 60) {
-            grade = 'B';
-        } else if (percentage < 60 && percentage >= 50) {
-            grade = 'C+';
-        } else if (percentage < 50 && percentage > 40) {
-            grade = 'C';
-        } else {
-            grade = 'F';
-        }
-
-        if (grade === 'F') {
-            document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage} <br> Your Grade is ${grade} and You Are Fail.`
-        } else {
-            document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage} <br> Your Grade is ${grade} and You Are Pass.`
-        }
+    if (percentage <= 100 && percentage >= 90) {
+        grade = 'A+';
+    } else if (percentage < 90 && percentage >= 80) {
+        grade = 'A';
+    } else if (percentage < 80 && percentage >= 70) {
+        grade = 'B+';
+    } else if (percentage < 70 && percentage >= 60) {
+        grade = 'B';
+    } else if (percentage < 60 && percentage >= 50) {
+        grade = 'C+';
+    } else if (percentage < 50 && percentage > 40) {
+        grade = 'C';
+    } else if (percentage <= 40) {
+        grade = 'F';
     }
+
+
+    if (physics == "" || chemistry == "" || maths == "" || computer == "") {
+        alert('Please Enter The Marks of Subject');
+    }
+    else if (physics == 100 || chemistry == 100 || maths == 100 || computer == 100) {
+
+        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are Pass.`
+    }
+    else if (physics.length > 2) {
+        document.getElementById('phys').innerHTML = `Please Enter the Marks Between 1 to 100`
+    }
+    else if (chemistry.length > 2) {
+        document.getElementById('chem').innerHTML = `Please Enter the Marks Between 1 to 100`
+    }
+    else if (maths.length > 2) {
+        document.getElementById('math').innerHTML = `Please Enter the Marks Between 1 to 100`
+    }
+    else if (computer.length > 2) {
+        document.getElementById('web').innerHTML = `Please Enter the Marks Between 1 to 100`
+    }
+    else if (grade == 'F') {
+        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are Fail.`
+    } else if (grade == 'A+' || grade == 'A' || grade == 'B+' || grade == 'B' || grade == 'C+' || grade == '') {
+        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are Pass.`
+    }
+
 }
 
 const Main = () => {
@@ -52,11 +67,25 @@ const Main = () => {
                         <ul><li>C</li><li>A</li><li>L</li><li>C</li><li>U</li><li>L</li><li>A</li><li>T</li><li>O</li><li>R</li></ul>
                     </Col>
                     <Col lg="6" sm="12" className="input-area">
-                        <Row className="physics"><Input type="text" className="input" id="physics" placeholder="Physics"></Input></Row>
-                        <Row className="chemistry"><Input type="text" className="input"  id="chemistry" placeholder="Chemistry"></Input></Row>
-                        <Row className="maths"><Input type="text" className="input"  id="maths" placeholder="Maths"></Input></Row>
-                        <Row className="web-programming"><Input type="text" className="input"  id="web-programming" placeholder="Web Programming"></Input></Row>
-                        <Row className="button"><Button class="btn" onClick={grade}>Show Percentage</Button></Row>
+                        <Form>
+                            <div className="form-group">
+                                <Input type="number" id="physics" className="form-control shadow-none" placeholder="Physics"></Input>
+                                <Row><span id="phys"></span></Row>
+                            </div>
+                            <div className="form-group">
+                                <Input type="number" id="chemistry" className="form-control shadow-none" placeholder="Chemistry"></Input>
+                                <Row><span id="chem"></span></Row>
+                            </div>
+                            <div className="form-group">
+                                <Input type="number" id="maths" className="form-control shadow-none" placeholder="Maths"></Input>
+                                <Row><span id="math"></span></Row>
+                            </div>
+                            <div className="form-group">
+                                <Input type="number" id="web-programming" className="form-control shadow-none" placeholder="Web Programming"></Input>
+                                <Row><span id="web"></span></Row>
+                            </div>
+                            <Button className="btn shadow-none" onClick={grade}>Show Percentage</Button>
+                        </Form>
                     </Col>
                 </Row>
                 <p id="result"></p>

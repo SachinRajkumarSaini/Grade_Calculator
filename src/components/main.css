@@ -19,9 +19,22 @@
     border-bottom: 2px solid #4b4b4b;
     background: transparent;
     color: whitesmoke;
-    margin-left: 4vmax;
-    margin-right: 4vmax;
     padding: 1rem 1rem;
+    font: normal 600 21px/20px var(--roboto);
+}
+
+.main-area .input-area select{
+    background: transparent;
+    color: whitesmoke;
+    
+    font: normal 600 21px/20px var(--roboto);
+}
+.main-area .input-area .row span{
+    border: none;
+    background: transparent;
+    color:#e8492a;
+    margin-left: 1.7rem;
+    margin-top: 0.3rem;
     font: normal 600 21px/20px var(--roboto);
 }
 .main-area .row .input-area input::placeholder{
@@ -32,7 +45,7 @@
 .main-area .text-area {
    padding-top: 5vmax;
    padding-left: 6vmax;
-   padding-right: 4vmax;
+   padding-right: 6vmax;
    padding-bottom: 2vmax;
 }
 
@@ -54,16 +67,42 @@
 .main-area .row .input-area .web-programming{
     padding: .8rem 0rem;
 }
-.main-area .row .input-area .button button{
+.main-area .row .input-area  button{
     margin-top: .8rem;
     margin-left: 4vmax;
     margin-right: 4vmax;
     color: #27c5b6 ;
     background-color: transparent;
     font: normal 700 25px/21px var(--roboto);
+    text-shadow: var(--box-shadow);
+    overflow: hidden;
     cursor: pointer;
-    border: none;
+    position: relative;
+    border: 2px solid #27c5b6;
+    border-radius: 4px;
 }
+
+.main-area .row .input-area  button:hover{
+    background: transparent;
+    background-clip: padding-box;
+    color:whitesmoke;
+    transition: all 0.6s ease;
+}
+
+.main-area .row .input-area  button::before{
+    content: "";
+    position: absolute;
+    background: turquoise;
+    width: 100%;
+    height: 50%;
+    top: 0%; left: 0%;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.5s ease;
+}
+.main-area .row .input-area  button:hover::before{
+    transform: translateX(100%) rotate(45deg);
+}
+
 
 p{
     padding-top: 3.5rem;
