@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Grade_Calculator/static/css/main.ce2a9222.chunk.css",
-    "main.js": "/Grade_Calculator/static/js/main.fb72b922.chunk.js",
-    "main.js.map": "/Grade_Calculator/static/js/main.fb72b922.chunk.js.map",
+    "main.js": "/Grade_Calculator/static/js/main.3505bcc8.chunk.js",
+    "main.js.map": "/Grade_Calculator/static/js/main.3505bcc8.chunk.js.map",
     "runtime-main.js": "/Grade_Calculator/static/js/runtime-main.8f431233.js",
     "runtime-main.js.map": "/Grade_Calculator/static/js/runtime-main.8f431233.js.map",
     "static/css/2.11829350.chunk.css": "/Grade_Calculator/static/css/2.11829350.chunk.css",
     "static/js/2.7071f253.chunk.js": "/Grade_Calculator/static/js/2.7071f253.chunk.js",
     "static/js/2.7071f253.chunk.js.map": "/Grade_Calculator/static/js/2.7071f253.chunk.js.map",
     "index.html": "/Grade_Calculator/index.html",
-    "precache-manifest.9ad29ae02de5f6c924116595da19b463.js": "/Grade_Calculator/precache-manifest.9ad29ae02de5f6c924116595da19b463.js",
+    "precache-manifest.0c47a878dc7c912591aafc5d2541c4fa.js": "/Grade_Calculator/precache-manifest.0c47a878dc7c912591aafc5d2541c4fa.js",
     "service-worker.js": "/Grade_Calculator/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/Grade_Calculator/static/css/2.11829350.chunk.css.map",
     "static/css/main.ce2a9222.chunk.css.map": "/Grade_Calculator/static/css/main.ce2a9222.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.7071f253.chunk.js",
     "static/css/main.ce2a9222.chunk.css",
-    "static/js/main.fb72b922.chunk.js"
+    "static/js/main.3505bcc8.chunk.js"
   ]
 }
