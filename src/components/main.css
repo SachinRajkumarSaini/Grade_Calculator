@@ -1,17 +1,33 @@
-/* Impprt Variables */
-
-@import url('./_variables.css');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Roboto:wght@700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.main-area {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
 }
 
 .main-area .jumbotron{
     background-color: #3d3d3d;
-    margin: 11vmin;
-    box-shadow: var(--box-shadow);
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10vmin;
+    -webkit-box-shadow: 6px 6px 6px 6px #292827;   
+    -moz-box-shadow:    6px 6px 6px 6px #292827;   
+    box-shadow:         6px 6px 6px 6px #292827; 
+}
+
+.main-area .jumbotron .row .input-area{
+    padding-right: 5vw;
+    justify-content: center;
 }
 .main-area .input-area input{
     border: none;
@@ -19,15 +35,9 @@
     border-bottom: 2px solid #4b4b4b;
     background: transparent;
     color: whitesmoke;
-    padding: 1rem 1rem;
-    font: normal 600 21px/20px var(--roboto);
-}
-
-.main-area .input-area select{
-    background: transparent;
-    color: whitesmoke;
-    
-    font: normal 600 21px/20px var(--roboto);
+    padding: 6px 0px;
+    width: 100%;
+    font: normal 600 21px/20px 'Balsamiq Sans', cursive;
 }
 .main-area .input-area .row span{
     border: none;
@@ -35,46 +45,31 @@
     color:#e8492a;
     margin-left: 1.7rem;
     margin-top: 0.3rem;
-    font: normal 600 21px/20px var(--roboto);
-}
-.main-area .row .input-area input::placeholder{
-    color: whitesmoke;
-    outline: none;
+    font: normal 600 21px/20px 'Balsamiq Sans', cursive;
 }
 
-.main-area .text-area {
-   padding-top: 5vmax;
-   padding-left: 6vmax;
-   padding-right: 6vmax;
-   padding-bottom: 2vmax;
+.main-area .row .input-area input::placeholder{
+    color: whitesmoke;
+}
+
+.main-area .jumbotron .row .text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
 }
 
 .main-area .text-area> ul li{
-    font: normal 700 34px/45px var(--roboto);
+    font: normal 700 34px/45px 'Balsamiq Sans', cursive;
     color: #27c5b6;
     animation: light 1.3s linear infinite;
 }
-
-.main-area .row .input-area .physics{
-    padding: .8rem 0rem;
-}
-.main-area .row .input-area .chemistry{
-    padding: .8rem 0rem;
-}
-.main-area .row .input-area .maths{
-    padding: .8rem 0rem;
-}
-.main-area .row .input-area .web-programming{
-    padding: .8rem 0rem;
-}
 .main-area .row .input-area  button{
     margin-top: .8rem;
-    margin-left: 4vmax;
-    margin-right: 4vmax;
+    margin-left: 1rem;
     color: #27c5b6 ;
     background-color: transparent;
-    font: normal 700 25px/21px var(--roboto);
-    text-shadow: var(--box-shadow);
+    font: normal 700 25px/21px 'Balsamiq Sans', cursive;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -104,11 +99,12 @@
 }
 
 
-p{
+.main-area .jumbotron p{
     padding-top: 3.5rem;
-    padding-left: 3.8vw;
-    font: normal 600 30px/30px var(--roboto);
+    font: normal 600 30px/30px 'Balsamiq Sans', cursive;
     color: #27c5b6;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes light{
@@ -202,9 +198,6 @@ p{
 .main-area .text-area ul:nth-child(3) li:nth-child(10){
     animation-delay: 2.1s;
 }
-
-
-
 
 
 

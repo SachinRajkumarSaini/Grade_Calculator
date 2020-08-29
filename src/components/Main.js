@@ -1,5 +1,6 @@
 import React from "react";
-import { Jumbotron, Row, Col, Input, Button, Form } from 'reactstrap';
+import { Jumbotron, Input, Button, Form } from 'reactstrap';
+import { Row, Col} from 'react-grid-system';
 import "./main.css";
 
 document.body.style = 'background-color: #27c5b6;';
@@ -11,7 +12,8 @@ let grade = () => {
     let total = parseFloat(physics) + parseFloat(chemistry) + parseFloat(maths) + parseFloat(computer);
     let percentage = total / 400 * 100;
     let grade = "";
-
+    let result = "";
+    
     if (percentage <= 100 && percentage >= 90) {
         grade = 'A+';
     } else if (percentage < 90 && percentage >= 80) {
@@ -28,31 +30,43 @@ let grade = () => {
         grade = 'F';
     }
 
+    if (grade == 'F') {
+        result = 'Fail';
+    }
+
+    if (grade == 'A+' || grade == 'A' || grade == 'B+' || grade == 'B' || grade == 'C+' || grade == 'C') {
+        result = 'Pass';
+    }
 
     if (physics == "" || chemistry == "" || maths == "" || computer == "") {
         alert('Please Enter The Marks of Subject');
     }
-    else if (physics == 100 || chemistry == 100 || maths == 100 || computer == 100) {
 
-        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are Pass.`
+    if ((physics.length < 3 && physics.length > 0 || physics == 100) && (chemistry.length < 3 && chemistry.length > 0 || chemistry == 100) && (maths.length < 3 && maths.length > 0 || maths == 100) && (computer.length < 3 && computer.length > 0 || computer == 100)) {
+        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are ${result}.`
     }
-    else if (physics.length > 2) {
+
+    if (physics.length > 2) {
         document.getElementById('phys').innerHTML = `Please Enter the Marks Between 1 to 100`
     }
-    else if (chemistry.length > 2) {
+    if (chemistry.length > 2) {
         document.getElementById('chem').innerHTML = `Please Enter the Marks Between 1 to 100`
     }
-    else if (maths.length > 2) {
+    if (maths.length > 2) {
         document.getElementById('math').innerHTML = `Please Enter the Marks Between 1 to 100`
     }
-    else if (computer.length > 2) {
+    if (computer.length > 2) {
         document.getElementById('web').innerHTML = `Please Enter the Marks Between 1 to 100`
     }
-    else if (grade == 'F') {
-        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are Fail.`
-    } else if (grade == 'A+' || grade == 'A' || grade == 'B+' || grade == 'B' || grade == 'C+' || grade == '') {
-        document.getElementById('result').innerHTML = `Out Of 400 Your Total is ${total} and Percentage is ${percentage}. Your Grade is ${grade} and You Are Pass.`
-    }
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -61,12 +75,12 @@ const Main = () => {
         <div className="main-area">
             <Jumbotron className="jumbotron">
                 <Row className="row">
-                    <Col lg="6" sm="12" className="text-area">
+                    <Col lg={6} md={6} sm={12} className="text-area">
                         <ul><li>S</li><li>T</li><li>U</li><li>D</li><li>E</li><li>N</li><li>T</li></ul>
                         <ul><li>G</li><li>R</li><li>A</li><li>D</li><li>E</li></ul>
                         <ul><li>C</li><li>A</li><li>L</li><li>C</li><li>U</li><li>L</li><li>A</li><li>T</li><li>O</li><li>R</li></ul>
                     </Col>
-                    <Col lg="6" sm="12" className="input-area">
+                    <Col lg={6} md={6} sm={12} className="input-area">
                         <Form>
                             <div className="form-group">
                                 <Input type="number" id="physics" className="form-control shadow-none" placeholder="Physics"></Input>
@@ -88,7 +102,7 @@ const Main = () => {
                         </Form>
                     </Col>
                 </Row>
-                <p id="result"></p>
+                <p id="result">This Grade Calculator will Find Out Your Total Marks, Percentage & Grade with Final Result.</p>
             </Jumbotron>
         </div>
     );
