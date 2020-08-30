@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7615aa2e57cee6d38292484a83243e0a",
+    "revision": "a8b8e3a0ce2604f242b9b72b0d2c9e08",
     "url": "/Grade_Calculator/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Grade_Calculator/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "54582d1548e878aae011",
-    "url": "/Grade_Calculator/static/css/main.339c50f9.chunk.css"
+    "revision": "f8d72d24e54420a7a9b1",
+    "url": "/Grade_Calculator/static/css/main.5d45fc30.chunk.css"
   },
   {
     "revision": "c05f4300ce1beb3c8525",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Grade_Calculator/static/js/2.4b4d653a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "54582d1548e878aae011",
+    "revision": "f8d72d24e54420a7a9b1",
     "url": "/Grade_Calculator/static/js/main.345dc94b.chunk.js"
   },
   {
